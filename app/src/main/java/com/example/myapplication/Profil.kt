@@ -40,7 +40,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun Profil(windowClass: WindowSizeClass, onClick : () -> Unit) {
+fun Profil(windowClass: WindowSizeClass, onClick: () -> Unit) {
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colorScheme.background
@@ -55,7 +55,7 @@ fun Profil(windowClass: WindowSizeClass, onClick : () -> Unit) {
                     Spacer(modifier = Modifier.height(20.dp))
                     Presentation()
                     Spacer(modifier = Modifier.height(40.dp))
-                    Resaux()
+                    Reseaux()
                     Spacer(modifier = Modifier.height(90.dp))
                     Button(onClick = onClick) {
                         Text("Démarrer")
@@ -77,7 +77,7 @@ fun Profil(windowClass: WindowSizeClass, onClick : () -> Unit) {
                         Column() {
                             Presentation()
                             Spacer(modifier = Modifier.height(30.dp))
-                            Resaux()
+                            Reseaux()
                         }
                     }
                     Button(onClick = onClick) {
@@ -89,7 +89,7 @@ fun Profil(windowClass: WindowSizeClass, onClick : () -> Unit) {
     }
 }
 @Composable
-fun Resau(icon : ImageVector, lien : String){
+fun Reseau(icon : ImageVector, lien : String){
     Row(horizontalArrangement = Arrangement.Start){
         Icon(icon,
             contentDescription = "logo $icon",
@@ -104,11 +104,11 @@ fun Resau(icon : ImageVector, lien : String){
 }
 
 @Composable
-fun Resaux(){
+fun Reseaux(){
     Column() {
-        Resau(Icons.Rounded.Email, "fabian.larwa@etu.iut-tlse3.fr" )
-        Resau(Icons.Rounded.Phone, "06.85.20.57.93")
-        Resau(Icons.Rounded.PlayArrow, "www.youtube.com/@Joyca")
+        Reseau(Icons.Rounded.Email, "fabian.larwa@etu.iut-tlse3.fr" )
+        Reseau(Icons.Rounded.Phone, "06.85.20.57.93")
+        Reseau(Icons.Rounded.PlayArrow, "www.youtube.com/@Joyca")
     }
 }
 
